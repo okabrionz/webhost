@@ -1,0 +1,51 @@
+<header class="header-transparent" id="header-main">
+    <nav class="navbar navbar-main navbar-expand-lg navbar-sticky navbar-transparent navbar-dark bg-dark" id="navbar-main">
+        <div class="container">
+            <a class="navbar-brand mr-lg-5" href="/">
+                <img alt="Web Host Indonesia" src="/img/webhost-favicon2.png" height="25">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse"
+                aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar-main-collapse">
+
+                {{ $currentPage := . }}
+                <ul class="navbar-nav ml-auto">
+                    {{ range .Site.Menus.main }}
+                    {{ if .HasChildren }}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="{{.URL}}" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ .Pre }}
+                            <span>{{ .Name }}</span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {{ range .Children }}
+                            <a class="dropdown-item" href="{{.URL}}">{{.Name}}</a>
+                            {{ end }}
+                        </div>
+                    </li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{.URL}}">
+                            {{ .Pre }}
+                            <span>{{ .Name }}</span>
+                        </a>
+                    </li>
+                    {{end}}
+                    {{end}}
+                    <li class="nav-item mr-0">
+                        <a href="https://t.me/brionz" target="_blank" class="nav-link d-lg-none">Hubungi Kami</a>
+                        <a href="https://t.me/brionz" target="_blank" class="btn btn-sm btn-white btn-circle btn-icon d-none d-lg-inline-flex">
+                            <span class="btn-inner--icon"><i class="fab fa-telegram"></i></span>
+                            <span class="btn-inner--text">Hubungi Kami</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

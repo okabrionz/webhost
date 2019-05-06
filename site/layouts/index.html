@@ -1,13 +1,185 @@
 {{ define "main" }}
+{{ partial "header" . }}
+<section class="slice slice-lg pt-200">
+    <div class="container">
+        <div class="mb-md text-center">
+            <h3 class="heading h2">Kami Membantu Bisnis Semakin Berkembang</h3>
+            <div class="fluid-paragraph mt-3">
+                <p class="lead">Mulai membangun situs yang Cepat, Indah, Aman, dan lebih Modern yang disajikan oleh
+                    para profesional Tanah Air.</p>
+            </div>
+        </div>
+        <div class="row row-grid">
+            <div class="col-lg-4">
+                <div class="px-4 text-center">
+                    <div class="mb-4">
+                        <div class="icon icon-lg icon-shape box-shadow-3 rounded-circle bg-primary text-white">
+                            <i class="far fa-paint-brush"></i>
+                        </div>
+                    </div>
+                    <h5 class="heading h5 mb-3">Desain Unik</h5>
+                    <p>Kami menyajikan variasi halaman web yang unik, dijamin beda dari yang lain. Pengunjung pasti
+                        merasakan pengalaman <b>Interface</b> yang lebih berkesan.</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-circle mt-3">Selengkapnya</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="px-4 text-center">
+                    <div class="mb-4">
+                        <div class="icon icon-lg icon-shape box-shadow-3 rounded-circle bg-primary text-white">
+                            <i class="far fa-code"></i>
+                        </div>
+                    </div>
+                    <h5 class="heading h5 mb-3">Kecepatan Website</h5>
+                    <p>Pengunjung akan lupa tujuannya jika membuka halaman lebih dari 3 detik. Karena itu, kami sangat
+                        mengedepankan <b>kecepatan halaman web</b>.</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-circle mt-3">Selengkapnya</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="px-4 text-center">
+                    <div class="mb-4">
+                        <div class="icon icon-lg icon-shape box-shadow-3 rounded-circle bg-primary text-white">
+                            <i class="fas fa-shield-check"></i>
+                        </div>
+                    </div>
+                    <h5 class="heading h5 mb-3">Kemanan Terjamin</h5>
+                    <p>Keamanan website adalah hal yang paling penting. Rasakan sensasi memiliki situs dengan tingkat
+                        keamanan canggih, Anda hanya perlu fokus pemasaran saja.</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary btn-circle mt-3">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
+<section class="slice pb-0 bg-secondary" data-delimiter-before="1" data-delimiter-after="1">
+    <div class="container">
+        <div class="row row-grid">
+            <div class="col-lg-3 align-self-center">
+                <h3 class="h3">Kualitas Pengalaman</h3>
+                <p class="lead mt-4">Kami selalu mendahulukan tampilan pada Smartphone. Karena hampir 80%
+                    pengunjung/pelanggan mencari informasi dari Smartphone nya.</p>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="block block-image-holder px-4">
+                    <div class="block-image z-depth-2-top">
+                        <img alt="Web Host Indonesia" src="/img/home-mockup2.png" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 align-self-end">
+                <div class="pb-5">
+                    <p class="pt-3">Kami menerapkan desain <b>"Mobile First</b> ini untuk semua situs yang kami
+                        kerjakan. Jadi, Anda tidak perlu membuat 2(dua) web untuk satu kebutuhan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-{{ partial "short-text" .Params.blurb}}
+<section class="slice slice-lg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <div class="swiper-js-container">
+                    <div class="swiper-container" data-swiper-items="1" data-swiper-space-between="0">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="text-center">
+                                    <p class="h2 lh-160 text-gray font-italic font-weight-300" style="font-family: 'Playfair Display', serif;">"Puas,
+                                        Terima kasih untuk semua tim webhost.co.id yang telah membantu saya membuat
+                                        situs yang bagus."</p>
+                                    <div class="text-center mt-4">
+                                        <h3 class="h5">B. Yudha</h3>
+                                        <span class="lead text-muted">Mens Batik</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center">
+                                    <p class="h2 lh-160 text-gray font-italic font-weight-300" style="font-family: 'Playfair Display', serif;">"Dulu
+                                        situs saya pernah di hack. setelah pindah ke WebHost, sampai sekarang belum ada
+                                        lagi tangan-tangan jahil."</p>
+                                    <div class="text-center mt-4">
+                                        <h3 class="h5">Richard A.</h3>
+                                        <span class="lead text-muted">PAULMAY.ID</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center">
+                                    <p class="h2 lh-160 text-gray font-italic font-weight-300" style="font-family: 'Playfair Display', serif;">"Landing
+                                        Page berkelas, desain sangat disesuaikan dengan selera dan kebutuhan saya."</p>
+                                    <div class="text-center mt-4">
+                                        <h3 class="h5">Sultan M.</h3>
+                                        <span class="lead text-muted">Indo Awning</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="text-center">
+                                    <p class="h2 lh-160 text-gray font-italic font-weight-300" style="font-family: 'Playfair Display', serif;">"Kalo
+                                        pakai WP bikin 1 halaman aja kayaknya malah berat banget, solusinya bikin
+                                        landing page disini aja, ga pake WP."</p>
+                                    <div class="text-center mt-4">
+                                        <h3 class="h5">Maulana</h3>
+                                        <span class="lead text-muted">IDCanopy.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-{{ partial "2-up" .Params }}
+<section class="slice slice-lg bg-dark">
+    <span class="tongue tongue-top"><i class="far fa-angle-down"></i></span>
+    <div class="container">
+        <div class="mb-md text-center">
+            <h3 class="heading h3 text-white">Ada Pertanyaan?</h3>
+            <div class="fluid-paragraph text-center mt-4">
+                <p class="lead lh-180 text-muted">Biarkan kami yang menelpon, silahkan tinggalkan nomor HP Anda.</p>
+            </div>
+        </div>
 
-{{ partial "text-and-image" (dict "heading" .Params.values.heading "text" .Params.values.text "buttonText" "Read more" "buttonLink" "/values") }}
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form action="terima-kasih" name="Telpon" netlify>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <input name="Nomor HP" type="text" class="form-control form-control-lg" placeholder="082319228XXX">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn btn-lg btn-block btn-primary">Ajukan</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
-{{ partial "blog" . }}
+<section class="slice slice-lg bg-secondary">
 
+    <span class="tongue tongue-top tongue-dark"><i class="far fa-angle-up"></i></span>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-8 text-center">
+                <h3 class="font-weight-400">Saya sudah siap menggunakan Jasa <span class="font-weight-700">WebHost.co.id</span></h3>
+                <div class="mt-5">
+                    <a href="https://t.me/brionz" target="_blank" class="btn btn-primary btn-circle btn-translate--hover px-4">Hubungi
+                        Sekarang</a>
+                    <a href="mailto:me@okabrionz.com" class="btn btn-link">Memiliki kendala?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {{ end }}

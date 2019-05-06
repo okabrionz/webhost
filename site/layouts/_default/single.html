@@ -1,6 +1,192 @@
-{{ define "main" }}
+{{define "main"}}
+<section class="bg-cover bg-size--cover" style="height: 600px;  background: #1f4037;background: -webkit-linear-gradient(to left, #035a43, #99f2c8);{{ if eq .Params.image 0 }}/img/pagisenja.jpg{{else}}background-image: url('{{ .Params.image }}'){{end}} background-position: top center;"></section>
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/7.jpg" "title" "This is where the heading goes" "subtitle" "This is where the subtitle goes") }}
-{{ .Content }}
+<section class="slice slice-lg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <h1 class="lh-150 mb-3">{{.Title}}</h1>
+                <p class="lead text-muted mb-0">
+                    {{.Description}}
+                </p>
+                <div class="media align-items-center mt-5">
+                    <img alt="Web Host Indonesia" src="/img/webhost-favicon2.png" class="avatar avatar-sm mr-3">
+                    <div class="media-body">
+                        <span class="h6 mb-0">Tim Web Host Indonesia</span>
+                        <span class="text-small text-muted">25th July 2018</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-{{ end }}
+<section class="slice">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <!-- Article body -->
+                <article>
+                    {{.Content}}
+                </article>
+                <hr>
+                <h5 class="mb-4">Comments</h5>
+                <div class="p-5 bg-secondary border rounded">
+                    <h5 class="mt-5 mb-4">Add you comment</h5>
+                    <form class="form-secondary">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="sr-only">Nama</label>
+                                    <input name="Nama" class="form-control" placeholder="Nama" type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label class="sr-only">Alamat Email</label>
+                                    <input name="Email" class="form-control" placeholder="Alamat Email" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Nomor Telpon</label>
+                            <input name="Nomor Telp." class="form-control" placeholder="Nomor Telpon" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only">Tulis pesan Anda</label>
+                            <textarea name="Pesan" class="form-control textarea-autosize" rows="3" placeholder="Tulis pesan Anda disini"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-block btn-primary shadow mt-4">Reply</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slice slice-lg bg-secondary" data-delimiter-before="1" data-delimiter-after="1">
+    <div class="container">
+        <div class="mb-md text-center">
+            <h3 class="heading h2">
+                Terbaru dari blog
+            </h3>
+            <div class="fluid-paragraph mt-3">
+                <p class="lead">Mulai membangun situs web yang cepat, indah, dan tampak modern dalam waktu singkat menggunakan layanan kami.</p>
+            </div>
+        </div>
+        <div class="row row-grid">
+            <div class="col-lg-4">
+                <div class="card shadow-sm shadow--hover">
+                    <img alt="Image placeholder" src="/img/img-1-800x600.jpg" class="card-img-top">
+                    <div class="card-body py-5 text-center">
+                        <a href="#" class="h5 lh-150">Choose the best solution for your business</a>
+                        <h6 class="text-muted mt-4 mb-0">25 April, 2018</h6>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col text-center">
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item pr-4">
+                                        <a href="#" class="text-muted"><i class="far fa-share mr-1 text-muted"></i> 131</a>
+                                    </li>
+                                    <li class="list-inline-item pr-4">
+                                        <a href="#" class="text-muted"><i class="far fa-eye mr-1 text-muted"></i> 255</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-muted"><i class="far fa-comments mr-1 text-muted"></i>
+                                            14</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm shadow--hover">
+                    <img alt="Image placeholder" src="/img/img-2-800x600.jpg" class="card-img-top">
+                    <div class="card-body py-5 text-center">
+                        <a href="#" class="h5 lh-150">How to find the right design for your specific product</a>
+                        <h6 class="text-muted mt-4 mb-0">25 April, 2018</h6>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col text-center">
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item pr-4">
+                                        <a href="#" class="text-muted"><i class="far fa-share mr-1 text-muted"></i> 131</a>
+                                    </li>
+                                    <li class="list-inline-item pr-4">
+                                        <a href="#" class="text-muted"><i class="far fa-eye mr-1 text-muted"></i> 255</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-muted"><i class="far fa-comments mr-1 text-muted"></i>
+                                            14</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm shadow--hover">
+                    <img alt="Image placeholder" src="/img/img-3-800x600.jpg" class="card-img-top">
+                    <div class="card-body py-5 text-center">
+                        <a href="#" class="h5 lh-150">How to win buyers and influence sales with marketing</a>
+                        <h6 class="text-muted mt-4 mb-0">25 April, 2018</h6>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col text-center">
+                                <ul class="list-inline mb-0">
+                                    <li class="list-inline-item pr-4">
+                                        <a href="#" class="text-muted"><i class="far fa-share mr-1 text-muted"></i> 131</a>
+                                    </li>
+                                    <li class="list-inline-item pr-4">
+                                        <a href="#" class="text-muted"><i class="far fa-eye mr-1 text-muted"></i> 255</a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <a href="#" class="text-muted"><i class="far fa-comments mr-1 text-muted"></i>
+                                            14</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slice py-5 bg-secondary delimiter-top">
+    <div class="container">
+        <div class="row row-grid align-items-center justify-content-center">
+            <div class="col-lg-4">
+                <div class="pr-lg-5 text-center text-lg-right">
+                    <h5 class="mb-0">Sign up for the daily newsletter:</h5>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-group shadow mb-0">
+                        <div class="input-group input-group-transparent input-group-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white border-right-0"><i class="far fa-envelope-open"></i></span>
+                            </div>
+                            <input type="text" class="form-control border-left-0" placeholder="Enter your email ...">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-dark">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+{{end}}

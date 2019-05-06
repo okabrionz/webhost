@@ -1,9 +1,122 @@
-<!doctype html>
-<html lang="en">
-  {{ partial "head" . }}
-  <body class="sans-serif">
-    {{ partial "nav" . }}
-    {{ block "main" . }}{{ end }} 
-    {{ partial "footer" . }} 
-  </body>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Web Host Indonesia menawarkan jasa pembuatan website profesional untuk bisnis kecil, toko online, perusahaan, dan lainnya. WebHost.co.id">
+    <meta name="author" content="Webhost.co.id">
+
+
+    <title>Web Host Indonesia</title>
+    <link rel="canonical" href="https://webhost.co.id">
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-image">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800">
+    <link rel="stylesheet" href="/css/all.min.css">
+    <link type="text/css" href="/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme.min.css">
+
+
+</head>
+
+<body>
+    {{partialCached "menu" . }}
+    <main>
+        {{- block "main" . }}
+        {{- end }}
+    </main>
+
+
+    <footer class="footer footer-dark bg-gradient-primary">
+        <div class="container">
+            <div class="row pt-md">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <a href="/">
+                        <img src="/img/webhost-black.svg" alt="Webhost Indonesia" height="30px">
+                    </a>
+                    <p class="text-sm">Jasa pembuatan website profesional untuk bisnis kecil dan besar. Web Host
+                        Idonesia</p>
+                </div>
+                <div class="col-lg-2 col-6 col-sm-4 ml-lg-auto mb-5 mb-lg-0">
+                    <h6 class="heading mb-3">Account</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Profile</a>
+                        </li>
+                        <li><a href="#">Settings</a>
+                        </li>
+                        <li><a href="#">Billing</a>
+                        </li>
+                        <li><a href="#">Notifications</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 col-sm-4 mb-5 mb-lg-0">
+                    <h6 class="heading mb-3">About</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a href="#">Services</a>
+                        </li>
+                        <li><a href="#">Contact</a>
+                        </li>
+                        <li><a href="#">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-4 mb-5 mb-lg-0">
+                    <h6 class="heading mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Terms</a>
+                        </li>
+                        <li><a href="#">Privacy</a>
+                        </li>
+                        <li><a href="#">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-md-between py-4 mt-4 delimiter-top">
+                <div class="col-md-6">
+                    <div class="copyright text-sm font-weight-bold text-center text-md-left">
+                        &copy; 2018 <a href="https://webhost.co.id/" class="font-weight-bold" target="_blank">Web Host
+                            Indonesia</a>.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav justify-content-center justify-content-md-end mt-3 mt-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://dribbble.com/antihacx" target="_blank">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="https://instagram.com/antihacx" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/antihacx" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://facebook.com/antihacx" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/in-view.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script src="/js/theme.min.js"></script>
+
+</body>
+
 </html>
