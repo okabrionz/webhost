@@ -1,25 +1,26 @@
 {{define "main"}}
-<section class="bg-cover bg-size--cover" style="height: 600px;  background: #1f4037;background: -webkit-linear-gradient(to left, #035a43, #99f2c8);{{ if eq .Params.image 0 }}/img/pagisenja.jpg{{else}}background-image: url('{{ .Params.image }}'){{end}} background-position: top center;"></section>
-
 <section class="slice slice-lg">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-9">
-                <h1 class="lh-150 mb-3">{{.Title}}</h1>
+                <h1 class="lh-150 mb-2">{{.Title}}</h1>
                 <p class="lead text-muted mb-0">
                     {{.Description}}
                 </p>
-                <div class="media align-items-center mt-5">
+                <div class="media align-items-center mt-3">
                     <img alt="Web Host Indonesia" src="/img/webhost-favicon2.png" class="avatar avatar-sm mr-3">
                     <div class="media-body">
                         <span class="h6 mb-0">Tim Web Host Indonesia</span>
-                        <span class="text-small text-muted">25th July 2018</span>
+                        <p>{{ .Date.Format "Mon, 2 Jan, 2006" }} Read in {{ .ReadingTime }} minutes</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+{{if .Params.image}}<section class="container">
+    <img class="img-fluid" src="{{.Params.image}}" alt="{{.Title}}">
+</section>{{end}}
 
 <section class="slice">
     <div class="container">
@@ -29,37 +30,6 @@
                 <article>
                     {{.Content}}
                 </article>
-                <hr>
-                <h5 class="mb-4">Comments</h5>
-                <div class="p-5 bg-secondary border rounded">
-                    <h5 class="mt-5 mb-4">Add you comment</h5>
-                    <form class="form-secondary">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="sr-only">Nama</label>
-                                    <input name="Nama" class="form-control" placeholder="Nama" type="text">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label class="sr-only">Alamat Email</label>
-                                    <input name="Email" class="form-control" placeholder="Alamat Email" type="text">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only">Nomor Telpon</label>
-                            <input name="Nomor Telp." class="form-control" placeholder="Nomor Telpon" type="text">
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only">Tulis pesan Anda</label>
-                            <textarea name="Pesan" class="form-control textarea-autosize" rows="3" placeholder="Tulis pesan Anda disini"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-lg btn-block btn-primary shadow mt-4">Reply</button>
-                    </form>
-                </div>
-
             </div>
         </div>
     </div>
@@ -188,5 +158,4 @@
     </div>
 </section>
 
-</main>
 {{end}}
